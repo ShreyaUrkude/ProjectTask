@@ -1,0 +1,193 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #008080;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav a {
+  color: #FFD700;
+  margin: 0 1rem;
+  font-weight: bold;
+  transition: color 0.3s;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #ffcc00;
+}
+
+
+main {
+  flex-grow: 1;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  margin: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+
+footer {
+  background-color: #f5f5f5;
+  color: #777;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  box-shadow: inset 0 1px 0 rgba(0,0,0,0.05);
+}
+
+
+button {
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background-color: #008080;
+  color: #fff;
+  transition: background-color 0.3s;
+}
+
+button:hover:not(:disabled) {
+  background-color: #006666;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  background-color: #fff;
+}
+
+textarea {
+  resize: none;
+  height: 100px;
+}
+
+
+input[type="checkbox"] {
+  margin-right: 8px;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+label {
+  font-size: 1rem;
+  color: #333;
+  cursor: pointer;
+  user-select: none;
+}
+
+
+.home-container {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.home-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.home-container label {
+  display: block;
+  margin: 1rem 0;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+
+.user-page {
+  text-align: center;
+  padding: 2rem;
+}
+
+.user-page h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.user-page p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.social-icons a {
+  font-size: 1.8rem;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #008080;
+}
+
+@media (max-width: 600px) {
+  main {
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  input, textarea {
+    max-width: 100%;
+  }
+
+  .home-container h1 {
+    font-size: 2rem;
+  }
+
+  .user-page h2 {
+    font-size: 1.5rem;
+  }
+}
